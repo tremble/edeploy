@@ -258,6 +258,7 @@ cleanup() {
                 ;;
             7)
                 unregister_cdn $dir
+                do_chroot ${dir} rm /etc/yum.repos.d/rhel-source.repo
                 ;;
         esac
     fi
